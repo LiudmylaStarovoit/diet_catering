@@ -54,7 +54,7 @@ function calculator() {
         elements.forEach(elem => {
             elem.addEventListener('click', (e) => {
                 if (e.target.getAttribute('data-ratio')) {
-                    ratio = +e.target.getAttribute('data-ratio');    //вытаскиваем данные с этого атрибута
+                    ratio = +e.target.getAttribute('data-ratio');    
                     localStorage.setItem('ratio', +e.target.getAttribute('data-ratio'));
                 } else {
                     sex = e.target.getAttribute('id');
