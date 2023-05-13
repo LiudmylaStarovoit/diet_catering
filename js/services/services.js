@@ -1,4 +1,4 @@
-const postData = async (url, data)  => { //отвечает за постинг данных
+const postData = async (url, data)  => {
     let res = await fetch(url, {
         method: "POST",
         headers: {
