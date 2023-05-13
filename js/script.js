@@ -1,5 +1,5 @@
 require('es6-promise').polyfill();
-import 'nodelist-foreach-polyfill'; //это файл установился в node modules
+import 'nodelist-foreach-polyfill'; 
 import tabs from './modules/tabs';
 import timer from './modules/timer';
 import slides from './modules/slides';
