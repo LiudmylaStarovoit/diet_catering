@@ -34,7 +34,7 @@ function slides({container, slide, nextArrow, prevArrow, totalCounter, currentCo
 
     slider.style.position = 'relative';
 
-    const indicators = document.createElement('ol'), //оберетка для кнопок
+    const indicators = document.createElement('ol'), 
           dots = [];
     indicators.classList.add('carousel-indicators');
     indicators.style.cssText = `
