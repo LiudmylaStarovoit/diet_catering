@@ -10,11 +10,11 @@ function forms(formSelector, modalTimerId) {
         failure: 'Что-то пошло не так...'
     };
 
-     forms.forEach(item => { //под каждую фомру подвязываем ф-цию postData
+     forms.forEach(item => {
        bindPostData(item);
     });
 
-    function bindPostData(form) {    //отвечает за привязку постинга
+    function bindPostData(form) {    
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
@@ -24,10 +24,10 @@ function forms(formSelector, modalTimerId) {
                 display: block;
                 margin: 0 auto;
             `;
-            form.insertAdjacentElement('afterend', statusMessage); //метод вставки элемента на страничку
-                                       //куда ставим   что ставим
+            form.insertAdjacentElement('afterend', statusMessage); 
+                                     
 
-            const formData = new FormData(form); //собирает данные в js чтобы отправить на сервер
+            const formData = new FormData(form); 
 
             const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
@@ -48,7 +48,7 @@ function forms(formSelector, modalTimerId) {
         const prevModalDialog = document.querySelector('.modal__dialog');
 
         prevModalDialog.classList.add('hide');
-        openModal('.modal', modalTimerId); //отвечает за открытие модельных окон
+        openModal('.modal', modalTimerId);
 
         const thanksModal = document.createElement('div');
         thanksModal.classList.add('modal__dialog');
